@@ -20,7 +20,7 @@ RSpec.configure do |config|
     secret_key_base = 'a' * 32
 
     allow(Rails).to(
-      receive_message_chain(:application, :secrets, :secret_key_base)
+      receive_message_chain(:application, :secret_key_base)
         .and_return(secret_key_base)
     )
   end
